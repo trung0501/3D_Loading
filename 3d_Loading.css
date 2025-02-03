@@ -1,0 +1,118 @@
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(#00203FFF, #00203FFF) #cecdc9; /* Navy blue*/
+  background-size: 23.5rem 5.5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: center;
+}
+
+.loading-txt {
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 65%;
+  left: 50.5%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: #808080; /* Gray */
+  z-index: 10;
+}
+
+.MrCenter,
+.rotate {
+  -webkit-perspective: 20rem;
+  -webkit-transform-style: preserve-3d;
+  perspective: 20rem;
+  transform-style: preserve-3d;
+}
+
+.MrCenter {
+  position: relative;
+  margin: auto;
+  padding: 2rem;
+  background: radial-gradient(transparent 0%, transparent 60%, #00203FFF 61%, #00203FFF 100%), /* Navy blue */
+              linear-gradient(#00203FFF, #00203FFF),
+              radial-gradient(transparent 0%, transparent 60%, #00203FFF 61%, #00203FFF 100%);
+  background-size: 6rem 6rem, 12rem 6rem, 6rem 6rem;
+  background-repeat: no-repeat;
+  background-position: 0 0, 50% 0, 100% 0;
+  box-shadow: 0 0 0 10000rem #00203FFF;
+}
+
+.MrCenter:before,
+.MrCenter:after {
+  content: '';
+  position: absolute;
+  top: .45rem;
+  height: 5.1rem;
+  width: 5.1rem;
+  border-radius: 50%;
+  background: #808080; /* Gray */
+  box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.5),
+              2px 2px 4px white;
+}
+
+.MrCenter:before {
+  left: .45rem;
+}
+.MrCenter:after {
+  right: .4rem;
+}
+
+.rotate {
+  position: relative;
+  width: 20rem;
+  height: 2rem;
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-animation: rotating 1s linear infinite;  
+  animation: rotating 1s linear infinite;
+}
+
+.rotate:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  background: #ADEFD1FF; /* Mint */
+  border-radius: 50%;
+  box-shadow: inset 0 -3px 4px rgba(255, 255, 255, 0.6),
+              inset 0 -4px 8px rgba(0, 0, 0, 0.5),
+              inset 0 -9px 12px #000000; /* Black shadow effect */
+  -webkit-animation: rotating 1s linear infinite reverse;
+  animation: rotating 1s linear infinite reverse;
+}
+
+@-webkit-keyframes rotating {
+  0% {
+    -webkit-transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(400grad);
+  }
+}
+@keyframes rotating {
+  0% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(400grad);
+  }
+}
