@@ -31,3 +31,13 @@
     . Clear interface: The word "Loading" put the center, easy to see and communicate clear goals.
 
     . High customization: Easy to edit colors, rotation speed or rotating object shape.
+
+⚠️ Limit:
+       
+    . No actual process connection: The effect runs continuously without reflecting the actual state of data download.
+
+    . Optimization of performance: On weak devices or old browsers, 3D and continuous rotation can cause shock/lag.
+
+    . No JavaScript: There is no condition to stop the effect or attach to the actual load event.
+
+    . It is difficult to expand for many steping steps: the current interface only shows the "waiting" state without reflecting the progress or load percentage.
